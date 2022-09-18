@@ -44,7 +44,7 @@
                         </li>
                         <li class="mr-10 relative">
                             <span class="absolute bottom-2/4 left-3/4">
-                                <div class="badge badge-secondary">99</div>
+                                <div id="badge-count" class="badge badge-secondary">0</div>
                             </span>
                             <label for="my-drawer-4" class="drawer-button"><span><i
                                         class="fa-solid fa-cart-shopping"></i></span></label>
@@ -112,6 +112,9 @@
 
                         </div> -->
                     </div>
+                    <div>
+                        <button class="my-10 btn btn-secondary btn-outline block mx-auto">Clear Cart</button>
+                    </div>
                     <div class="bg-slate-400 text-white rounded-md p-4 ">
                         <div class="flex justify-between">
                             <p>Total Product:</p>
@@ -122,17 +125,15 @@
                             <p>$<span id="product-price">0</span></p>
                         </div>
                         <div class="flex justify-between">
-                            <p>Total Product:</p>
+                            <p>Total Tax:</p>
                             <p>$<span id="product-tax">0</span></p>
                         </div>
                         <hr class="border-2">
                         <div class="flex justify-between">
-                            <p>Total Product:</p>
+                            <p>Total Price:</p>
                             <p>$<span id="total-price">0</span></p>
                         </div>
                     </div>
-
-
                 </div>
             </ul>
         </div>

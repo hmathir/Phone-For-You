@@ -47,13 +47,20 @@ const handleModal = (id) => {
     <p>Product ID: ${phoneID}</p>`;
 }
 
-
+let count = 0;
+let newPrice = 0;
+let newTax = 0;
 const handleBuyNow = (id) => {
     const cartItemContainer = document.getElementById('cart-item');
     const phone = dataSet.find(item=> item.id === id);
-    const { img, name } = phone;
+    const { img, name, price } = phone;
     if(cartArray.indexOf(phone) === -1){
         cartArray.push(phone);
+
+        count++;
+        newPrice = newPrice + price;
+        tax = newPrice * 0.1
+
 
         const newCartItem = document.createElement('div');
         newCartItem.classList.add("flex", "justify-between", "items-center", "bg-slate-400","p-4","rounded-md","mt-4")
@@ -64,15 +71,21 @@ const handleBuyNow = (id) => {
             <img src="${img}" class="w-10" alt="">
         </div>
         <p class="text-white">${name}</p>
-        <input class="border-2 border-red-100 w-10 text-center rounded-md" type="text" value="1"
+        <input class="special-class border-2 border-red-100 w-10 text-center rounded-md" type="text" value="1"
             readonly>
         <i class="fa-solid fa-trash text-red-700"></i>
         `;
         cartItemContainer.appendChild(newCartItem);
-    } else{
-        alert('Item Already Added');
-        
+        document.getElementById('badge-count').innerText = count;
+        document.getElementById('total-product').innerText = count;
+        document.getElementById('product-price').innerText = newPrice.toFixed(2);
+        document.getElementById('product-tax').innerText = tax.toFixed(2);
+        document.getElementById('total-price').innerHTML = (newPrice + tax).toFixed(2);
+    }
+    else{
+        alert('Item Already Added. \nYou Can Not Purchase More than One Item Together.');
+        return;
     }
 
- 
+
 }
