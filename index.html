@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone For You</title>
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Tailwind & DaisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.28.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!-- Header Section Started -->
+
+    <!-- Navbar Here -->
+    <nav>
+        <div class="navbar bg-slate-400">
+            <div class="flex-1">
+                <img src="images/pixel.png" class="w-10" alt="">
+                <a class="btn btn-ghost normal-case text-2xl text-white">Pixel Store</a>
+            </div>
+            <div class="flex-none">
+                <div class="hidden md:block">
+                    <ul class="flex text-white">
+                        <li class="mr-10">
+                            <span><i class="fa-solid fa-house"></i></span>
+                            <span>Home</span>
+                        </li>
+                        <li class="mr-10">
+                            <span><i class="fa-solid fa-heart"></i></span>
+                            <span>Wishlist</span>
+                        </li>
+                        <li class="mr-10">
+                            <span><i class="fa-solid fa-list-check"></i></span>
+                            <span>Order</span>
+                        </li>
+                        <li class="mr-10 relative">
+                            <span class="absolute bottom-2/4 left-3/4">
+                                <div class="badge badge-secondary">99</div>
+                            </span>
+                            <label for="my-drawer-4" class="drawer-button"><span><i
+                                        class="fa-solid fa-cart-shopping"></i></span></label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:hidden dropdown dropdown-end">
+                    <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                        <div>
+                            <i class="fa-solid fa-bars text-white"></i>
+                        </div>
+                    </label>
+                    <ul tabindex="0"
+                        class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                        <li>
+                            <span><i class="fa-solid fa-house"></i><span>Home</span></span>
+                        </li>
+                        <li>
+                            <span><i class="fa-solid fa-heart"></i><span>Wishlist</span></span>
+                        </li>
+                        <li>
+                            <span><i class="fa-solid fa-list-check"></i><span>Order</span></span>
+                        </li>
+                        <li>
+
+                            <label for="my-drawer-4" class="drawer-button"><span><i
+                                        class="fa-solid fa-cart-shopping"></i></span> <span>Cart</span></label>
+
+
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Drawer Here -->
+    <div class="drawer drawer-end">
+        <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
+        <div class="drawer-content">
+            <!-- Page content here -->
+            <div id="phone-container" class="gap-5 grid md:grid-cols-2 lg:grid-cols-3 my-10 w-11/12 md:w-9/12 mx-auto">
+                <!-- Sinle card -->
+                <!-- Append From 'Script.js' -->
+                <!-- Sinle card -->
+            </div>
+
+        </div>
+        <div class="drawer-side">
+            <label for="my-drawer-4" class="drawer-overlay"></label>
+            <ul class="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
+                <!-- Sidebar content here -->
+                <div>
+
+                </div>
+            </ul>
+        </div>
+    </div>
+
+    <!-- MODAL HERE -->
+    <div>
+        <!-- The button to open modal -->
+        <!-- <label for="my-modal-3" class="btn modal-button">open modal</label> -->
+
+        <!-- Put this part before body -->
+        <input type="checkbox" id="my-modal-3" class="modal-toggle" />
+        <div class="modal">
+            <div class="modal-box relative">
+                <label for="my-modal-3" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                <div id="modal-body">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/modal.js"></script>
+</body>
+
+</html>
