@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phone For You</title>
+    <title>Order</title>
 
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -31,17 +31,17 @@
                 <div class="hidden md:block">
                     <ul class="flex text-white">
                         <li class="mr-10">
-                            <span><i class="fa-solid fa-house"></i></span>
-                            <span>Home</span>
+                            <a href="index.html"><span><i class="fa-solid fa-house"></i></span>
+                                <span>Home</span></a>
+
                         </li>
                         <li class="mr-10">
                             <span><i class="fa-solid fa-heart"></i></span>
                             <span>Wishlist</span>
                         </li>
                         <li class="mr-10">
-                            <a href="order.html"><span><i class="fa-solid fa-list-check"></i></span>
-                                <span>Order</span></a>
-
+                            <span><i class="fa-solid fa-list-check"></i></span>
+                            <span>Order</span>
                         </li>
                         <li id="com-cart" class="mr-10 relative">
                             <span class="absolute bottom-2/4 left-3/4">
@@ -88,7 +88,7 @@
         <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
         <div class="drawer-content">
             <!-- Page content here -->
-            <div id="phone-container" class="gap-5 grid md:grid-cols-2 lg:grid-cols-3 my-10 w-11/12 md:w-9/12 mx-auto">
+            <div id="order-container" class="gap-5 grid md:grid-cols-2 lg:grid-cols-3 my-10 w-11/12 md:w-9/12 mx-auto">
                 <!-- Sinle card -->
                 <!-- Append From 'Script.js' -->
                 <!-- Sinle card -->
@@ -162,7 +162,7 @@
         </div>
     </div>
     <script src="js/common.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/order.js"></script>
 </body>
 
 </html>
